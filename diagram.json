@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "author": "Huynh Kien",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 150, "left": -80, "attrs": {} },
+    { "type": "wokwi-breadboard", "id": "bb", "top": 198.6, "left": 233.2, "attrs": {} },
+    { "type": "wokwi-gas-sensor", "id": "mq2", "top": -102.9, "left": 602.2, "attrs": {} },
+    { "type": "wokwi-buzzer", "id": "buzzer", "top": -26.4, "left": 491.4, "attrs": {} }
+  ],
+  "connections": [
+    [ "uno:5V", "bb:tp.1", "red", [] ],
+    [ "uno:GND", "bb:tn.1", "black", [] ],
+    [ "bb:tp.5", "mq2:VCC", "red", [ "h28", "v48.3", "h393.6" ] ],
+    [ "bb:tn.5", "mq2:GND", "black", [ "v269.3", "h636.4", "v-739.2", "h-624" ] ],
+    [ "uno:A0", "mq2:AO", "blue", [] ],
+    [ "uno:10", "buzzer:1", "purple", [] ],
+    [ "bb:tn.15", "buzzer:2", "black", [] ]
+  ],
+  "dependencies": {}
+}
